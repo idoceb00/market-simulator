@@ -30,11 +30,15 @@ public class User {
         this.name = name.trim();
     }
 
-    public void setEmail(String name) {
-        if (email != null && !email.isBlank()){
-            throw new IllegalArgumentException("ERROR: User name cannot be blank");
+    public void setEmail(String email) {
+        if (email == null || email.isBlank()){
+            throw new IllegalArgumentException("ERROR: User email cannot be blank");
         }
 
-        this.name = name.trim();
+        if (!email.matches("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$")){
+            throw new IllegalArgumentException("ERROR: User email format is invalid");
+        }
+
+        this.email = email;
     }
 }

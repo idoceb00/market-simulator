@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 
-    private User user = User.create("Percu", "percu@example.com");
+    private final User user = User.create("Percu", "percu@example.com");
 
 
     @Test
