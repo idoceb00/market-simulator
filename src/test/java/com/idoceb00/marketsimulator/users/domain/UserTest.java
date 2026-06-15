@@ -17,12 +17,12 @@ class UserTest {
 
     @Test
     void notcreateUserWithBlankName(){
-        assertThrows(IllegalArgumentException.class, () -> User.create("", "percu@example.com");
+        assertThrows(IllegalArgumentException.class, () -> User.create("", "percu@example.com"));
     }
 
     @Test
     void notCreateUserWithInvalidEmail() {
-        assertThrows(IllegalArgumentException.class, () -> User.create("Percu", "invalid-email");
+        assertThrows(IllegalArgumentException.class, () -> User.create("Percu", "invalid-email"));
     }
 
     @Test
